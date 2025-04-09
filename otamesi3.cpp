@@ -57,14 +57,14 @@ int main() {
     MatrixXd A1 = readMatrixCSV("matrix1.csv", N, N);
     VectorXd b1 = readVectorCSV("vector1.csv", N);
     VectorXd x1 = A1.colPivHouseholderQr().solve(b1);
-    writeVectorCSV("solution1.csv", x1);
+    writeVectorCSV("solution3.csv", x1);
 
     // matrix2.csv + vector2.csv
     MatrixXd A2 = readMatrixCSV("matrix2.csv", N, N);
     VectorXd b2 = readVectorCSV("vector2.csv", N);
     VectorXd x2 = A2.colPivHouseholderQr().solve(b2);
-    writeVectorCSV("solution2.csv", x2);
+    writeVectorCSV("solution4.csv", x2);
 
-    cout << "連立方程式を解いて solution1.csv と solution2.csv に出力しました。" << endl;
+    cout << "連立方程式を解いて solution3.csv と solution4.csv に出力しました。" << endl;
     return 0;
 }
