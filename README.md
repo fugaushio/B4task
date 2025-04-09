@@ -1,6 +1,7 @@
 # README
 ## 進め方
 ・このレポジトリをcloneして，課題を進めてください．\
+・URLを開いただけではbranch作成権限がないので，github上で右上のメールボックスから「accept invitation」をクリックしてください\
 ・cloneしたら，各自のBranchを作成し，各々のBranchの中で作業を行ってください．\
 ・課題ができたらpushしてください．
 
