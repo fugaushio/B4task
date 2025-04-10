@@ -1,6 +1,6 @@
-#include <iostream>
-#include <fstream>
-#include <Eigen/Dense>
+#include <iostream> //c++において画面表示の入出力を扱うライブラリ(i:input,o:output
+#include <fstream> //ファイル操作用(今回の場合CSVの読み込み）
+#include <Eigen/Dense> 
 #include <string>
 
 using namespace std;
