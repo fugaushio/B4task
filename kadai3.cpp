@@ -58,11 +58,11 @@ void write_csv_vec(Eigen::VectorXd vec, std::string path){
 
 int main(){
     std::vector<std::vector<float>> mat1, mat2;
-    mat1 = read_csv_mat("Input/matrix1.csv");
-    mat2 = read_csv_mat("Input/matrix2.csv");
+    mat1 = read_csv_mat("../Input/matrix1.csv");
+    mat2 = read_csv_mat("../Input/matrix2.csv");
     std::vector<float> vec1, vec2, result1, result2;
-    vec1 = read_csv_vec("Input/vector1.csv");
-    vec2 = read_csv_vec("Input/vector2.csv");
+    vec1 = read_csv_vec("../Input/vector1.csv");
+    vec2 = read_csv_vec("../Input/vector2.csv");
     Eigen::MatrixXd A1(100, 100), A2(100, 100);
     Eigen::VectorXd b1(100), b2(100);
     for ( int i=0; i<100; i++){
@@ -74,8 +74,10 @@ int main(){
         }
     }
     
-    Eigen::VectorXd ans = A.inverse() * b;
+    Eigen::VectorXd ans = A1.inverse() * b1;
+    Eigen::VectorXd ans2 = A2.inverse() * b2;
     write_csv_vec(ans, "result3.csv");
+    write_csv_vec(ans2, "result4.csv");
     // write_csv_vec(result2, "result2.csv");
     return 0;
 }
