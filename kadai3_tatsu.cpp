@@ -31,7 +31,7 @@ MatrixXd readMatrixCSV(const string& filename, int rows, int cols) {  //CSVか�
 
 // CSVからベクトルを読み込む
 VectorXd readVectorCSV(const string& filename, int size) { //csvからベクトルを読む関数，VectorXdはEigenの「ベクトル」データ型(一列のやつ）
-    VectorXd vec(size); 
+    VectorXd vec(size); //空のベクトルつくる
     ifstream file(filename);
     string line;
     int i = 0; //ベクトル用の空配列を用意。1行ずつ読んで詰める準備。
@@ -55,9 +55,9 @@ int main() {
     const int N = 100;  //メイン関数のはじまり！ N=100 は行列のサイズ（100×100
 
     // matrix1.csv + vector1.csv
-    MatrixXd A1 = readMatrixCSV("matrix1.csv", N, N);  //1個目の連立方程式の係数行列A₁とベクトルb₁を読み込む
-    VectorXd b1 = readVectorCSV("vector1.csv", N);  //A₁x₁ = b₁ を解いて、x₁（解ベクトル）を計算する
-    VectorXd x1 = A1.colPivHouseholderQr().solve(b1);  //.colPivHouseholderQr() はQR分解ってやつ（安全で高速）
+    MatrixXd A1 = readMatrixCSV("matrix1.csv", N, N);  
+    VectorXd b1 = readVectorCSV("vector1.csv", N);  //1個目の連立方程式の係数行列A₁とベクトルb₁を読み込む
+    VectorXd x1 = A1.colPivHouseholderQr().solve(b1);  //A₁x₁ = b₁ を解いて、x₁（解ベクトル）を計算する．.colPivHouseholderQr() はQR分解ってやつ（安全で高速）
     writeVectorCSV("solution3.csv", x1);  //解x₁を solution1.csv に書き出す！
 
     // matrix2.csv + vector2.csv
