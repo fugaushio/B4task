@@ -112,8 +112,8 @@ int main(){
 
    double t;
 
-   std:: string path_A = "../Matrix1.csv";//インプットファイル
-   std:: string path_b = "../Vector1.csv";
+   std:: string path_A = "../Input/matrix1.csv";//インプットファイル
+   std:: string path_b = "../Input/vector1.csv";
    std:: string path_x = "./Solution.csv";
 
    //generateCsv(N,N,path_A);//インプットファイルを生成
@@ -196,14 +196,14 @@ int main(){
         }
     }
 
-/*     std::cout<<"Inv_A="<<std::endl;
+    /* std::cout<<"Inv_A="<<std::endl;
 
     for (int i = 0; i < inv.size(); i++) {
         for (int j = 0; j < inv[0].size(); j++) {
             std::cout << inv[i][j] << " ";
         }
         std::cout << std::endl;
-    } */
+    }  */
 
     //逆行列を右辺にかける
 
