@@ -22,7 +22,7 @@ std::vector<std::vector<double>> read_Matrix1(std::string path){
 
     k=0;
 
-    a.reserve(20000);
+    a.reserve(10000);
 
     while (getline(ifs, line)) {    
         // 「,」区切りごとにデータを読み込むためにistringstream型にする
@@ -32,14 +32,12 @@ std::vector<std::vector<double>> read_Matrix1(std::string path){
        
         // 「,」区切りごとにデータを読み込む
         while (getline(i_stream, str, ',')) {
-           int num = stoi(str);
+           double num = stod(str);
            a[k].push_back(num);
         }
         k++;
     
     }
-
-
 
     return a;
 
@@ -62,12 +60,11 @@ std::vector<double> read_Matrix2(std::string path){
         // 「,」区切りごとにデータを読み込む
         while (getline(i_stream, str, ',')) {
            // csvファイルに書き込む
-           int num = stoi(str);
+           double num = stod(str);
            b.push_back(num);
         }
     
     }
-
 
 
     return b;

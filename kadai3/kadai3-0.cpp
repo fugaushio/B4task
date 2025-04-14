@@ -14,7 +14,7 @@ Eigen::MatrixXd readCSV(std::string file) {
     int row = 0;
     int col = 0;
 
-    std::vector<std::vector<int>> data;
+    std::vector<std::vector<double>> data;
   
     
     //std::cout << res << std::endl;
@@ -24,11 +24,11 @@ Eigen::MatrixXd readCSV(std::string file) {
         while (getline(in, line)) {
             std::istringstream i_stream(line);
             col = 0;
-            std::vector<int> row_data;
+            std::vector<double> row_data;
 
             std::string str;
             while (getline(i_stream, str, ',')) {
-                row_data.push_back(std::stoi(str));
+                row_data.push_back(std::stod(str));
             }
             data.push_back(row_data);
             row++;
@@ -46,6 +46,7 @@ Eigen::MatrixXd readCSV(std::string file) {
     if (rows > 0) {
         cols = data[0].size();
     }
+
 
     // Eigenの行列に変換
     Eigen::MatrixXd res = Eigen::MatrixXd(rows, cols);
@@ -69,8 +70,8 @@ int output(Eigen::VectorXd x, std::string path){
 
 int main(){
 
-    std::string path_A = "../Input/matrix2.csv";
-    std::string path_b = "../Input/vector2.csv";
+    std::string path_A = "../Input/matrix1.csv";
+    std::string path_b = "../Input/vector1.csv";
     std::string path_x = "./Solution_Eigen.csv";
 
     Eigen::MatrixXd A = readCSV(path_A);
