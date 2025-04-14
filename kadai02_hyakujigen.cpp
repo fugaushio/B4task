@@ -93,9 +93,9 @@ bool readVectorCSV(const string& filename, double b[MAX_N]) {
 }
 
 int main() {
-    string matrixFile = "/home/suwahikaru/B4task/matrix1.csv";
+    string matrixFile = "/home/suwahikaru/B4task/Input/matrix1.csv";
 
-    string vectorFile = "/home/suwahikaru/B4task/vector1.csv";
+    string vectorFile = "/home/suwahikaru/B4task/Input/vector1.csv";
 
     if (!readMatrixCSV(matrixFile, A)) return 1;
     if (!readVectorCSV(vectorFile, b)) return 1;
