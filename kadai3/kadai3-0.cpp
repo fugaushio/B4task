@@ -69,8 +69,8 @@ int output(Eigen::VectorXd x, std::string path){
 
 int main(){
 
-    std::string path_A = "../kadai2/Matrix1.csv";
-    std::string path_b = "../kadai2/Matrix2.csv";
+    std::string path_A = "../kadai2/Matrix2.csv";
+    std::string path_b = "../kadai2/Vector2.csv";
     std::string path_x = "./Solution_Eigen.csv";
 
     Eigen::MatrixXd A = readCSV(path_A);

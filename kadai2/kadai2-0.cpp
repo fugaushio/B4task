@@ -113,7 +113,7 @@ int main(){
    double t;
 
    std:: string path_A = "../Matrix1.csv";//インプットファイル
-   std:: string path_b = "../Matrix2.csv";
+   std:: string path_b = "../Vector1.csv";
    std:: string path_x = "./Solution.csv";
 
    //generateCsv(N,N,path_A);//インプットファイルを生成
