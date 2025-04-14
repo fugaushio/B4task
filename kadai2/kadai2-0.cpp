@@ -87,7 +87,7 @@ int output(std::vector<double> x, std::string path){
     return 0;
 }
 
-void generateCsv( int n, int m, std::string path){
+/* void generateCsv( int n, int m, std::string path){
 
     int i,j;
     std::ofstream ofs(path);
@@ -103,7 +103,7 @@ void generateCsv( int n, int m, std::string path){
         }
         ofs << std::endl;
     }
-}
+} */
 
 int main(){
 
@@ -112,12 +112,12 @@ int main(){
 
    double t;
 
-   std:: string path_A = "./Matrix1.csv";//インプットファイル
-   std:: string path_b = "./Matrix2.csv";
+   std:: string path_A = "../Matrix1.csv";//インプットファイル
+   std:: string path_b = "../Matrix2.csv";
    std:: string path_x = "./Solution.csv";
 
-   generateCsv(N,N,path_A);//インプットファイルを生成
-   generateCsv(N,1,path_b);
+   //generateCsv(N,N,path_A);//インプットファイルを生成
+   //generateCsv(N,1,path_b);
 
    std::vector<std::vector<double>> a = read_Matrix1(path_A);
    std::vector<double> b = read_Matrix2(path_b);
